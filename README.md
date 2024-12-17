@@ -240,9 +240,7 @@ Kode ini digunakan untuk menangani proses penambahan data minuman ke dalam datab
 
 
 # Halaman Update Proses Minuman
-![image](https://github.com/user-attachments/assets/c12e9f9a-cad4-486e-98d3-8300ab3b63a9)
-![image](https://github.com/user-attachments/assets/d4224772-5965-48c4-81e1-be554016d5e2)
-![image](https://github.com/user-attachments/assets/6a15d686-143f-4199-988f-bbedbce04ee6)
+![image](https://github.com/user-attachments/assets/b324cf02-94c4-4044-b515-f40540ab77fe)
 ##### 📊 Fitur Utama
 ##### 📝 Proses Pembaruan Data Minuman
 Kode ini menangani proses pembaruan data minuman yang ada dalam database. Sistem ini melakukan validasi pada input pengguna, memeriksa apakah data yang dimasukkan memenuhi syarat, dan kemudian memperbarui data minuman yang sesuai.
