@@ -269,6 +269,19 @@ Gradien background
 Efek hover
 Animasi ikon dan teks
 PHP - Menampilkan konten makanan secara dinamis.
+
+# Kontak dan Sosial Media
+
+Jangan lupa untuk mengikuti saya di platform berikut:
+
+| Platform   | Username / Kontak                   | Link                        |
+|------------|-------------------------------------|-----------------------------|
+| **GitHub** |      nurulaisyah1                   | [[Follow My GitHub](#)  ](https://github.com/nurulaisyah14)     |
+| **Instagram** | @nurull.asyh                       | [Follow My Instagram](https://instagram.com/nurull.asyh) |
+| **Email**  | nurulasy1407@gmail.com              | [Send Email](mailto:nurulasy1407@gmail.com) |
+
+Terima kasih telah mengikuti dan menghubungi saya!
+
 <div align="center">
 Made with ❤️ by Nurul Aisyah
 </div>
