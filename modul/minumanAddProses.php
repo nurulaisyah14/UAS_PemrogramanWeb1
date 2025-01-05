@@ -11,20 +11,70 @@ if (isset($_POST['submit'])) {
 
     // Validasi field nama minuman
     if (empty($nama_minuman) || strlen($nama_minuman) == 0) {
-        echo "<script>window.alert('Field nama minuman wajib diisi');window.location='?page=minumanAdd'</script>";
+        echo "<div class='container mt-4'>
+                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Field nama minuman wajib diisi!</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                <script>
+                    setTimeout(function() {
+                        window.location = '?page=minumanAdd';
+                    }, 2000);
+                </script>
+              </div>";
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $nama_minuman)) {
-        echo "<script>window.alert('Hanya huruf dan spasi yang diperbolehkan pada nama minuman');window.location='?page=minumanAdd'</script>";
-    
+        echo "<div class='container mt-4'>
+                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Hanya huruf dan spasi yang diperbolehkan pada nama minuman!</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                <script>
+                    setTimeout(function() {
+                        window.location = '?page=minumanAdd';
+                    }, 2000);
+                </script>
+              </div>";
+
     // Validasi field daerah minuman
     } elseif (empty($daerah_minuman) || strlen($daerah_minuman) == 0) {
-        echo "<script>window.alert('Field daerah minuman wajib diisi');window.location='?page=minumanAdd'</script>";
+        echo "<div class='container mt-4'>
+                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Field daerah minuman wajib diisi!</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                <script>
+                    setTimeout(function() {
+                        window.location = '?page=minumanAdd';
+                    }, 2000);
+                </script>
+              </div>";
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $daerah_minuman)) {
-        echo "<script>window.alert('Hanya huruf dan spasi yang diperbolehkan pada daerah minuman');window.location='?page=minumanAdd'</script>";
+        echo "<div class='container mt-4'>
+                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Hanya huruf dan spasi yang diperbolehkan pada daerah minuman!</strong>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                <script>
+                    setTimeout(function() {
+                        window.location = '?page=minumanAdd';
+                    }, 2000);
+                </script>
+              </div>";
     } else {
         // Validasi duplikasi data
         $cek = mysqli_num_rows(mysqli_query($conn, "SELECT nama_minuman FROM tbl_minuman WHERE nama_minuman='$nama_minuman'"));
         if ($cek > 0) {
-            echo "<script>window.alert('Data sudah tersedia');window.location='?page=minumanAdd'</script>";
+            echo "<div class='container mt-4'>
+                    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                        <strong>Data sudah tersedia!</strong>
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+                    <script>
+                        setTimeout(function() {
+                            window.location = '?page=minumanAdd';
+                        }, 2000);
+                    </script>
+                  </div>";
         } else {
             // Membuat query untuk memasukkan data
             $query = "INSERT INTO tbl_minuman (nama_minuman, daerah_minuman) VALUES ('$nama_minuman', '$daerah_minuman')";
@@ -32,11 +82,34 @@ if (isset($_POST['submit'])) {
 
             // Mengecek apakah proses simpan berhasil
             if ($sql) {
-                echo "<script>window.alert('Data berhasil ditambah!');window.location='?page=minuman';</script>";
+                echo "<div class='container mt-4'>
+                        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                            <strong>Data berhasil ditambah!</strong>
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                        <script>
+                            setTimeout(function() {
+                                window.location = '?page=minuman';
+                            }, 2000);
+                        </script>
+                      </div>";
             } else {
-                echo "<script>window.alert('Gagal menambah data!');window.location='?page=minuman';</script>";
+                echo "<div class='container mt-4'>
+                        <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                            <strong>Gagal menambah data!</strong>
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                        <script>
+                            setTimeout(function() {
+                                window.location = '?page=minuman';
+                            }, 2000);
+                        </script>
+                      </div>";
             }
         }
     }
 }
 ?>
+<!-- Link ke Bootstrap 5.3 JS (jika belum ada) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
