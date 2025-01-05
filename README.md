@@ -22,10 +22,8 @@ Selamat datang di proyek web **db_kuliner**
 Proyek ini adalah halaman web sederhana yang menampilkan berbagai kuliner tradisional Indonesia menggunakan HTML, CSS (animasi), dan PHP.
 
 # Halaman Home
-![image](https://github.com/user-attachments/assets/f0846f68-65bb-4c94-9727-bf7888a0f1f1)
-![image](https://github.com/user-attachments/assets/2f9d3cec-344a-4de3-be4c-583ed87b9a45)
-![image](https://github.com/user-attachments/assets/1955aedb-0d2d-489b-b4f1-91891743f92d)
-![image](https://github.com/user-attachments/assets/7ff4731b-8ed8-40f2-95a3-425dcaf1850e)
+![image](https://github.com/user-attachments/assets/059f2aff-faa5-42d7-86f9-53c5db513a9a)
+
 ### 🌟 Fitur Utama
 ##### 1. Hero Section Interaktif  
 - Animasi **background gradien** yang bergerak dinamis.  
@@ -50,9 +48,8 @@ Proyek ini adalah halaman web sederhana yang menampilkan berbagai kuliner tradis
 
 
 # Halaman About
-![image](https://github.com/user-attachments/assets/1f88bd55-5261-4a81-9697-d9100182a3ae)
-![image](https://github.com/user-attachments/assets/f2592b49-9261-469a-be72-c964e672a2e1)
-![image](https://github.com/user-attachments/assets/a30b3f23-56d5-4007-b82a-43258e953101)
+![image](https://github.com/user-attachments/assets/736590b4-07b6-4bb9-94f4-2dd28b586079)
+
 ### 🌟 Fitur Utama
 ##### 🍽️ Halaman Tentang Kami - Rumah Makan Nurul
 Halaman ini menampilkan informasi "Tentang Kami" dari **Rumah Makan Nurul** dengan desain menarik dan animasi halus.
@@ -75,11 +72,8 @@ Halaman ini menampilkan informasi "Tentang Kami" dari **Rumah Makan Nurul** deng
 
 
 # Halaman Contact
-![image](https://github.com/user-attachments/assets/5eeeeec1-d884-4538-b804-53ef9ceaae15)
-![image](https://github.com/user-attachments/assets/80266bb6-13d5-4927-8c29-859e6628dded)
-![image](https://github.com/user-attachments/assets/cee94869-41c5-415a-b492-c5418499f155)
-![image](https://github.com/user-attachments/assets/80f03668-fb21-402c-8719-cc268d7bb4fd)
-![image](https://github.com/user-attachments/assets/9679a33f-ac83-4e27-b9f7-c1f37b14f74c)
+![image](https://github.com/user-attachments/assets/06ee5e6c-3260-43df-9933-54d063fc7a7a)
+
 ##### 📞 Halaman Kontak - Rumah Makan Nurul
 Halaman ini menyediakan formulir kontak yang interaktif dan responsif untuk menerima pesan dari pelanggan.
 ##### 🚀 Fitur Utama
@@ -108,8 +102,8 @@ Halaman ini menyediakan formulir kontak yang interaktif dan responsif untuk mene
 
 
 # Halaman View Makanan
-![image](https://github.com/user-attachments/assets/149c4136-a0be-4a74-b2a4-c25f72d49473)
-![image](https://github.com/user-attachments/assets/58fae1b4-6be7-4530-889e-0013be987a46)
+![image](https://github.com/user-attachments/assets/78a565c1-0626-4783-8b9b-e8a256ca4b38)
+
 ##### 🍽️ Halaman Data Makanan
 Halaman ini digunakan untuk menampilkan, menambahkan, mengedit, dan menghapus data makanan yang berasal dari database. Data ditampilkan dalam bentuk tabel yang interaktif dan responsif.
 ##### 🚀 Fitur Utama
@@ -138,7 +132,7 @@ Halaman ini digunakan untuk menampilkan, menambahkan, mengedit, dan menghapus da
 
 
 # Halaman Add Proses Makanan
-![image](https://github.com/user-attachments/assets/96ca810d-1d1d-424c-8372-b1c8b7da2b73)
+![image](https://github.com/user-attachments/assets/c6bea44b-db72-438a-ba78-2e3bc1bcc9d9)
 
 ##### 📝 Proses Penambahan Data Makanan
 Kode ini bertujuan untuk menangani form penambahan data makanan. Sistem ini memvalidasi input yang diberikan oleh pengguna dan kemudian menyimpan data ke dalam database setelah pengecekan.
@@ -168,8 +162,7 @@ Kode ini bertujuan untuk menangani form penambahan data makanan. Sistem ini memv
 
 
 # Halaman Update Proses Makanan
-![image](https://github.com/user-attachments/assets/b1989fb5-8472-4c58-99fd-25f6186da055)
-
+![image](https://github.com/user-attachments/assets/c2605afe-9629-4fcf-8a23-3d67704559e9)
 ##### 📝 Proses Update Data Makanan
 Kode ini bertujuan untuk menangani proses pembaruan (update) data makanan dalam sistem. Sistem ini memvalidasi input yang diberikan oleh pengguna sebelum melakukan pembaruan data di database.
 ##### 🚀 Fitur Utama
@@ -191,8 +184,8 @@ Kode ini bertujuan untuk menangani proses pembaruan (update) data makanan dalam 
   
    
 # Halaman View Minuman
-![image](https://github.com/user-attachments/assets/a179d571-5281-44da-b36d-8ee10b8ddf50)
-![image](https://github.com/user-attachments/assets/4ec7ded4-e835-42f8-9f7f-cfea5f0be774)
+![image](https://github.com/user-attachments/assets/54dcb3eb-c9c9-4509-96f8-c11aef0d9c59)
+
 ##### 📝 Halaman Data Minuman
 Halaman ini digunakan untuk menampilkan daftar minuman yang tersimpan dalam database. Pengguna dapat melihat data minuman yang sudah ada, menambah data baru, serta mengedit atau menghapus data yang ada.
 ##### 🚀 Fitur Utama
@@ -216,7 +209,7 @@ Halaman ini digunakan untuk menampilkan daftar minuman yang tersimpan dalam data
 
 
 # Halaman Add Proses Minuman
-![image](https://github.com/user-attachments/assets/2d0b8c88-93b5-4608-9f62-0ad71c5630fb)
+![image](https://github.com/user-attachments/assets/301966cd-2628-4641-8fc3-3ca067e93f8b)
 
 ##### 📝 Proses Penambahan Data Minuman
 Kode ini digunakan untuk menangani proses penambahan data minuman ke dalam database. Sistem ini memvalidasi input dari pengguna, memeriksa duplikasi data, dan kemudian menyimpan data minuman jika semua validasi berhasil.
@@ -243,7 +236,7 @@ Kode ini digunakan untuk menangani proses penambahan data minuman ke dalam datab
 
 
 # Halaman Update Proses Minuman
-![image](https://github.com/user-attachments/assets/6de12ad3-37eb-4374-883e-aa1d0a4a9492)
+![image](https://github.com/user-attachments/assets/f09ec1c6-0eca-4af7-85d6-d861a0fa9f79)
 
 ##### 📊 Fitur Utama
 ##### 📝 Proses Pembaruan Data Minuman
