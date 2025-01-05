@@ -160,6 +160,7 @@
 </style>
 
 <div class="contact-container">
+    
     <h1>Kontak Kami</h1>
     <p>Hubungi kami untuk pertanyaan, saran, atau reservasi. Kami siap membantu Anda!</p>
     

@@ -1,48 +1,40 @@
-<?php
-require "includes/config.php";
-// Ambil id dari query string
-$id = $_GET['id'];
-// Buat query untuk mengambil data dari database
-$query = "SELECT * FROM tbl_minuman WHERE id_minuman=$id";
-$sql = mysqli_query($conn, $query);
-$data = mysqli_fetch_assoc($sql);
+<!-- Tambahkan link ke Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-// Jika data yang di-edit tidak ditemukan
-if (mysqli_num_rows($sql) < 1) {
-    die("Data tidak ditemukan...");
-}
-?>
-<table>
-    <tr>
-        <th colspan="3"><u>Update Data Daftar Minuman</u></th>
-    </tr>
-    <form method="post" action="?page=minumanUpdateProses">
-        <!-- Menampung nilai id yang akan di-edit -->
-        <input type="hidden" name="id" value="<?= $data['id_minuman'] ?>" />
-        <tr>
-            <td style="width: 8em;">Nama Minuman</td>
-            <td>:</td>
-            <td>
-                <input type="text" name="nama_minuman" style="width: 20em;" 
-                       value="<?= htmlspecialchars($data['nama_minuman']) ?>">
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 8em;">Daerah Minuman</td>
-            <td>:</td>
-            <td>
-                <input type="text" name="daerah_minuman" style="width: 20em;" 
-                       value="<?= htmlspecialchars($data['daerah_minuman']) ?>">
-            </td>
-        </tr>
-        <tr style="margin-top: 1em;">
-            <td></td>
-            <td></td>
-            <td colspan="3" style="padding: 0.5em;">
-                <input type="submit" name="update" value="Update">
-                <input type="button" value="Cancel" 
-                       onClick="document.location='?page=minuman'">
-            </td>
-        </tr>
-    </form>
-</table>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-center">
+            <u>Update Data Daftar Minuman</u>
+        </div>
+        <div class="card-body">
+            <form method="post" action="?page=minumanUpdateProses">
+                <!-- Menampung nilai id yang akan di-edit -->
+                <input type="hidden" name="id" value="<?= $data['id_minuman'] ?>" />
+
+                <div class="mb-3 row">
+                    <label for="nama_minuman" class="col-sm-3 col-form-label">Nama Minuman</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nama_minuman" id="nama_minuman" class="form-control" 
+                               value="<?= htmlspecialchars($data['nama_minuman']) ?>" required>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="daerah_minuman" class="col-sm-3 col-form-label">Daerah Minuman</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="daerah_minuman" id="daerah_minuman" class="form-control" 
+                               value="<?= htmlspecialchars($data['daerah_minuman']) ?>" required>
+                    </div>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <button type="submit" name="update" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger" onClick="document.location='?page=minuman'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Tambahkan link ke Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

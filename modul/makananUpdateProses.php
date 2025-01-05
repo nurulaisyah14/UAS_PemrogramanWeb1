@@ -13,26 +13,27 @@ if (isset($_POST['update'])) {
 
     // Validasi field nama makanan
     if (empty($nama_makanan) || strlen($nama_makanan) == 0) {
-        echo "<script>
-                window.alert('Field nama makanan wajib diisi');
-                window.location='?page=makanan';
-              </script>";
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                Field nama makanan wajib diisi.
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $nama_makanan)) {
-        echo "<script>
-                window.alert('Hanya huruf dan spasi yang diperbolehkan pada nama makanan');
-                window.location='?page=makanan';
-              </script>";
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                Hanya huruf dan spasi yang diperbolehkan pada nama makanan.
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";
+    
     // Validasi field daerah makanan
     } elseif (empty($daerah_makanan) || strlen($daerah_makanan) == 0) {
-        echo "<script>
-                window.alert('Field daerah makanan wajib diisi');
-                window.location='?page=makanan';
-              </script>";
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                Field daerah makanan wajib diisi.
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";
     } elseif (!preg_match("/^[a-zA-Z ]*$/", $daerah_makanan)) {
-        echo "<script>
-                window.alert('Hanya huruf dan spasi yang diperbolehkan pada daerah makanan');
-                window.location='?page=makanan';
-              </script>";
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                Hanya huruf dan spasi yang diperbolehkan pada daerah makanan.
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";
     } else {
         // Query untuk update data makanan
         $query = "UPDATE tbl_makanan 
@@ -43,16 +44,22 @@ if (isset($_POST['update'])) {
 
         // Cek apakah proses update berhasil
         if ($sql) {
-            echo "<script>
-                    window.alert('Data berhasil diupdate!');
-                    window.location='?page=makanan';
-                  </script>";
+            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    Data berhasil diupdate!
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                  </div>";
+            echo "<script>window.location='?page=makanan';</script>";
         } else {
-            echo "<script>
-                    window.alert('Gagal update data!');
-                    window.location='?page=makanan';
-                  </script>";
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    Gagal update data!
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                  </div>";
+            echo "<script>window.location='?page=makanan';</script>";
         }
     }
 }
 ?>
+
+<!-- Tambahkan link ke Bootstrap 5.3 CSS dan JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

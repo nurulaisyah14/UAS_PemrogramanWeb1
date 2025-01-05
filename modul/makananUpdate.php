@@ -8,41 +8,46 @@ $sql = mysqli_query($conn, $query);
 $data = mysqli_fetch_assoc($sql);
 // jika data yang di-edit tidak ditemukan
 if (mysqli_num_rows($sql) < 1) {
-die("data tidak ditemukan...");
+    die("data tidak ditemukan...");
 }
 ?>
-<table>
-<tr>
-<th colspan="3"><u>Update Data Daftar Makanan</u></th>
-</tr>
-<form method="post" action="?page=makananUpdateProses">
-<!-- menampung nilai id yang akan di edit -->
-<input type="hidden" name="id" value="<?= $data['id_makanan'] ?>" />
-<tr>
-<td style="width: 8em;">Nama Makanan</td>
-<td>:</td>
-<td><input type="text" name="nama_makanan" style="width: 20em;"
+<!-- Tambahkan link ke Bootstrap 5.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-value="<?= $data['nama_makanan'] ?>"></td>
-</tr>
-<tr>
-<td style="width: 8em;">Daerah Makanan</td>
-<td>:</td>
-<td><input type="text" name="daerah_makanan" style="width: 20em;"
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header text-center">
+            <u>Update Data Daftar Makanan</u>
+        </div>
+        <div class="card-body">
+            <form method="post" action="?page=makananUpdateProses">
+                <!-- menampung nilai id yang akan di edit -->
+                <input type="hidden" name="id" value="<?= $data['id_makanan'] ?>" />
+                
+                <div class="mb-3 row">
+                    <label for="nama_makanan" class="col-sm-3 col-form-label">Nama Makanan</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nama_makanan" id="nama_makanan" class="form-control" 
+                               value="<?= $data['nama_makanan'] ?>" required>
+                    </div>
+                </div>
 
-value="<?= $data['daerah_makanan'] ?>">
+                <div class="mb-3 row">
+                    <label for="daerah_makanan" class="col-sm-3 col-form-label">Daerah Makanan</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="daerah_makanan" id="daerah_makanan" class="form-control" 
+                               value="<?= $data['daerah_makanan'] ?>" required>
+                    </div>
+                </div>
 
-</td>
-</tr>
-<tr style="margin-top: 1em;">
-<td></td>
-<td></td>
-<td colspan="3" style="padding: 0.5em;">
-<input type="submit" name="update" value="Update">
-<input type="button" value="Cancel"
-onClick="document.location='?page=makanan'">
+                <div class="mb-3 text-center">
+                    <button type="submit" name="update" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary" onClick="document.location='?page=makanan'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-</td>
-</tr>
-</form>
-</table>
+<!-- Tambahkan link ke Bootstrap 5.3 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
